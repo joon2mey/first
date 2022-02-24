@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* 서브페이지 CSS - sub.css */
+
+/* 공통class 불러오기 */
+/* import 로 file 합치기
+    외부 css파일에서 다른 외부 css를
+    import 방식으로 불러올때 장점은
+    랜더링 속도 더뎌짐을 방지가능 */
+@import url(style.css);
+
+/* 메인 전체박스 */
+#cont{
+    text-align: left;
+    /* .bxc에서 중앙정렬값 덮어쓰기. 왼쪽정렬로 */
+}
