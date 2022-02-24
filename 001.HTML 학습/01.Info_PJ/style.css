@@ -101,6 +101,8 @@ nav.gnb img {
     /* va */
     /* 값은 수치로 줄 수 있고
                 top, middle, bottom, baseline 등 이 있음 */
+    border: none; /* 보더없앰 */
+    /* 이미지에 링크가 걸린경우 파란색 테두리가 서버에 올린 후 보일 수 있다 */
 }
 
 /* 하단주석 */
