@@ -13,3 +13,52 @@
     text-align: left;
     /* .bxc에서 중앙정렬값 덮어쓰기. 왼쪽정렬로 */
 }
+/* 기사제목 */
+.atit{
+    font-size: 30px;
+    font-weight: normal;
+    font-family: "맑은 고딕";
+    letter-spacing: -2px;
+    word-spacing: 3px;
+    white-space: nowrap;
+    margin-top: 0px;
+}
+.afig{
+    margin: 15px 0;
+}
+.afig img{
+    width: 100%;
+}
+.afig figcaption{
+    text-align: center;
+    line-height: 16px;
+    padding-bottom: 30px;
+}
+.afig small{
+    color: #666666;
+    font-family: 굴림;
+    font-size: 12px;
+}
+.tuin{
+    color: #777;
+    font-family: 돋움;
+    font-weight: 500;
+}
+.arti{
+    font-family: 굴림;
+    font-size: 17px;
+    line-height: 18px;
+}
+.bbox{
+    border: 1px solid #96aeeb;    
+    box-sizing: border-box;
+    padding: 20px 30px;
+}
+div>h4{
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+}
+.topme{
+    margin-bottom: 40px;
+}
