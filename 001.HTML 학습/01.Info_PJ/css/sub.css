@@ -62,3 +62,14 @@ div>h4{
 .topme{
     margin-bottom: 40px;
 }
+
+#cont a{
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#cont a:hover{
+    color: rgb(179, 140, 140);
+    font-size: 15px;
+}
