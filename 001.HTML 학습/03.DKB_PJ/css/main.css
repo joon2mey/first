@@ -35,7 +35,7 @@ body{
     /*   색상 이미지 반복여부 고정여부 위치/크기   */
     background: url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
 
-    
+
     /* background-color: lightpink;
     background-image: url(../images/bg_logo_a_01.png);
     background-repeat: no-repeat;
@@ -50,6 +50,7 @@ body{
     width: 1200px;
     margin: 0 auto; /* 위아래 양쪽 (auto는 등분함) */
     /* 마영오 블록박스 가로중앙 */
+    text-align: center;
 }
 
 /********* 1.상단영역 *********/
@@ -63,4 +64,9 @@ body{
 /********* 3.하단영역 *********/
 .info{
     height: 241px;
+}
+
+
+.logo{
+    padding: 20px;
 }
