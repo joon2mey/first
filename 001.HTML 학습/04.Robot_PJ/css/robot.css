@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* 로봇 PJ CSS */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../images/bg.jpg) no-repeat fixed top/cover;
+}
+
+/* 공사중 아웃라인 */
+body * {
+    outline: 2px dashed lime;
+}
+/* 로봇머리 */
+#head {
+    position: relative;
+    /* 부모자격 */
+    width: 250px;
+    height: 250px;
+    background: url(../images/metal01.jpg) no-repeat center/cover;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+#eye1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    /* 부모는? */
+    width: 50px;
+    height: 50px;
+    background: url(../images/e1.jpg) no-repeat 0/100% 100%;
+}
+#eye2 {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    /* 부모는? */
+    width: 50px;
+    height: 50px;
+    background: url(../images/e2.jpg) no-repeat 0/100% 100%;
+}
+#nose {
+    position: absolute;
+    top: 110px;
+    left: 100px;
+    /* 부모는? */
+    width: 50px;
+    height: 70px;
+    background: url(../images/nose.jpg) no-repeat 0/110% 100%;
+}
+#mouth {
+    position: absolute;
+    top: 190px;
+    left: 77px;
+    /* 부모는? */
+    width: 100px;
+    height: 30px;
+    background: url(../images/mouth.png) no-repeat 0/100% 100%;
+}
+#ear1 {
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    /* 부모는? */
+    width: 40px;
+    height: 70px;
+    background: url(../images/metal02.jpg) no-repeat 0/100% 100%;
+    border-radius: 10px 0 0 10px;
+}
+#ear2 {
+    position: absolute;
+    top: 40px;
+    right: -40px;
+    /* 부모는? */
+    width: 40px;
+    height: 70px;
+    background: url(../images/metal02.jpg) no-repeat 0/100% 100%;
+    border-radius: 0 10px 10px 0;
+}
