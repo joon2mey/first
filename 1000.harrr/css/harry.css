@@ -18,6 +18,11 @@ body * {
     outlne: 2px dashed lime;
 }
 
+ul,
+ol {
+    list-style: none;
+}
+
 html {
     font-size: 10px;
 }
@@ -62,6 +67,7 @@ html {
     font-size: 35px;
     font-weight: normal;
     text-align: center;
+    z-index: 1;
 
 }
 
@@ -74,6 +80,7 @@ html {
     color: black;
     font-size: 30px;
     margin-right: 20px;
+
 }
 
 .menu:hover a {
@@ -86,6 +93,7 @@ html {
         margin-right: 80px;
     }
 }
+
 
 .side {
     display: block;
@@ -105,4 +113,24 @@ html {
     width: 40%;
     height: 300px;
     background-color: rgb(240, 127, 51);
+    z-index: -1;
+}
+
+.smenu a {
+    font-size: 24px;
+    line-height: 30px;
+    color: #222;
+    text-decoration: none;
+}
+.smenu{
+    position: relative;
+    border: 2px solid #000;
+    background-color: rgb(240, 127, 51);
+    top: -4px;
+    left: -2px;
+    width: 100%;
+}
+#tmenu{
+    text-decoration: none;
+    color: black;
 }
