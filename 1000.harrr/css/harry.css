@@ -5,18 +5,25 @@ body {
     padding: 0;
     margin: 0;
 }
-
 body {
     background: white no-repeat fixed top/cover;
+    overflow-x: hidden;
 }
-
 body * {
     outline: 2px dashed lime;
 }
+html{
+    font-size: 10px;
+}
+/* 공통박스속성 */
+.box {
+    border: 2px solid #000;
 
+}
 .head {
     position: relative;
-    width: 40%;
+    display: block;
+    width: min(50%, 400px);
     background-color: rgb(194, 64, 88);
     line-height: 35px;
     height: 100px;
@@ -24,15 +31,31 @@ body * {
     font-weight: 900;
     text-align: left;
     padding: 30px;
-    border: 2px solid #000;
 }
-
 .rbox1 {
     position: absolute;
-    border: 1px solid #000;
-    width: 200px;
-    height: 100px;
+    display: block;
+    width: 80%;
+    height: 90px;
     background-color: rgb(9, 95, 42);
-    right: -200px;
-    z-index: 1;
+    top: -2px;
+    left: 200px;
+}
+.rbox2 {
+    position: absolute;
+    display: block;
+    width: 110%;
+    height: 40px;
+    background-color: rgb(240, 127, 51);
+    top: -2px;
+    left: 100px;
+}
+.side{
+    position: absolute;
+    display: block;
+    width: 20%;
+    height: 40px;
+    right: 0;
+    top: 0;
+    background-color: rgb(240, 127, 51);
 }
