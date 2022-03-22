@@ -23,7 +23,7 @@ body {
 
 
 /* 애니가 진행하는 동안 투명막 만들기 */
-body::after {
+body::after{
     content: '';
     display: block;
     position: fixed;
@@ -38,15 +38,12 @@ body::after {
     /* 애니메이션으로 일정시간뒤 없앰 */
     animation: coverDel .1s 7s forwards;
 }
-
 /* 애니후 없애기 */
 @keyframes coverDel {
-    to {
+    to{
         height: 0;
     }
-}
-
-/* coverDel 키프레임 */
+} /* coverDel 키프레임 */
 
 
 /* 기본태그 초기화 - 마진,패딩 없애기 */
@@ -219,8 +216,7 @@ body {
     /* 크기를 화면에 채움! */
     background-color: #fff;
     border-bottom: 1px solid #ccc;
-    z-index: 9999;
-    /* 상단박스 위치 가장위! */
+    z-index: 9999;/* 상단박스 위치 가장위! */
 
     /* 애니메이션: 이시이지반방마 */
     animation: topAni .8s ease-out 6s forwards;
@@ -250,10 +246,8 @@ body {
 #logo img {
     width: 100px;
 }
-
 /*********** sns메뉴 ***********/
-.snsbx {
-    /* 최상위박스 */
+.snsbx{ /* 최상위박스 */
     position: absolute;
     top: 25px;
     left: 50%;
@@ -264,67 +258,49 @@ body {
     /* 1200px이었다가 화면이 작아지면 100%로 변경! */
     /* outline: 2px dotted blue; */
 }
-
-.sns {
+.sns{
     float: right;
     margin-right: 50px;
     /* outline: 2px dotted red; */
 }
-
-.sns ul::after {
-    /* clear셋팅 */
+.sns ul::after{ /* clear셋팅 */
     content: '';
     display: block;
     clear: both;
 }
-
-.sns li {
+.sns li{
     float: left;
     margin: 0 5px;
 }
-
-.sns li:nth-child(2) {
-    /* 회원가입 li */
+.sns li:nth-child(2){/* 회원가입 li */
     margin-right: 20px;
 }
-
 /* sns메뉴용 li만 디자인 */
 /* 두번째 li이후 모든 li형제들 : 틸드(~) 형제들선택자 */
-.sns li:nth-child(2)~li {
+.sns li:nth-child(2)~li{
     width: 30px;
     height: 30px;
     background-image: url(../images/icons.png);
     background-repeat: no-repeat;
     margin: 0 1px;
 }
-
 /* 스프라이츠 기법으로 배경이미지 셋업 */
-.sns li:nth-child(3):hover {
-    /* 트위터오버시 */
+.sns li:nth-child(3):hover{/* 트위터오버시 */
     background-position: 0 -30px;
 }
-
-.sns li:nth-child(4) {
-    /* 페북 */
+.sns li:nth-child(4){/* 페북 */
     background-position: -30px 0;
 }
-
-.sns li:nth-child(4):hover {
-    /* 페북 오버시 */
+.sns li:nth-child(4):hover{/* 페북 오버시 */
     background-position: -30px -30px;
 }
-
-.sns li:nth-child(5) {
-    /* 인스타 */
+.sns li:nth-child(5){/* 인스타 */
     background-position: -60px 0;
 }
-
-.sns li:nth-child(5):hover {
-    /* 인스타 오버시 */
+.sns li:nth-child(5):hover{/* 인스타 오버시 */
     background-position: -60px -30px;
 }
-
-.sns a {
+.sns a{   
     color: #222;
     text-decoration: none;
 
@@ -334,7 +310,7 @@ body {
 }
 
 /* sns 설명글 숨기기 */
-.ir {
+.ir{
     display: none;
 }
 
@@ -465,7 +441,7 @@ body {
 }
 
 /* 모바일용 햄버거 버튼 */
-.ham {
+.ham{
     position: absolute;
     top: 18px;
     right: 20px;
@@ -481,14 +457,12 @@ body {
     display: none;
 
 }
-
 /* 버튼모양 변경위해 가상요소로 내용넣기! */
-.ham::before {
+.ham::before{
     content: '≡';
 }
-
 /* 크롬브라우저 포커스 아웃라인 없애기 */
-.ham:focus {
+.ham:focus{
     outline: none;
 }
 
@@ -499,53 +473,85 @@ body {
 /********** 2. 메인영역 **********/
 .cont {
     max-width: 1920px;
+    /* 가장 큰 일반 해상도 크기로 최대가로크기 변경! */
     height: 800px;
     overflow: hidden;
+    /* 자식요소 마진탑포함! */
     padding-bottom: 150px;
 }
 
+/* 캐릭터 부모박스 */
 #cbx {
     width: 90%;
+    /* 부모박스크기의 90%가로크기 */
     margin: 0 auto;
+    /* 마영오! - 블록가로중앙 */
     margin-top: 527px;
+    /* 윗쪽마진 400px+127px(#top만큼)로 설정 */
+    /* height: 300px; */
+    /* background-color: rgba(144, 238, 144, 0.637); */
 
+    /* overflow: hidden; */
+    /* float해제를 위해! 
+    -> 자식요소가 위로 올라갈때 가려져서 쓸 수 없음!!! */
+    /* -> 가상요소로 마지막에 float해제설정하기! */
 }
 
+/* 가상요소로 clear설정하기! */
 #cbx::after {
     content: '';
     display: block;
+    /* div와 비슷 */
     clear: both;
+    /* float을 끊어서 부모가 자식을 인식함! */
 }
 
+/* 캐릭터박스 공통 */
 .cat {
+    /* 4등분 가로 크기는 몇%? 25% */
     width: 24%;
+    /* 25% - 1%(양쪽마진) = 24% */
     margin: 0 .5%;
-
+    /* margin: 0 0.5%; */
+    /* 양쪽마진은 0.5%씩 2개이므로 합이 1%임
+    이를 크기에 반영한다! 
+    참고) 0.몇 이런수치값은 보통 0을 생략하는 경우가 많다*/
     float: left;
+    /* 
+        [ 블록요소를 옆으로 흘러가게 하기!!! ]
+        float속성
+        -> left 값은 나는 왼쪽에 너는 오른쪽에 올라와!
+        -> right 값은 나는 오른쪽에 너는 왼쪽에 올라와!
 
+        [ 자식요소가 float된 경우 부모요소는 높이값 0? ]
+        -> 블록 자식요소 float으로 인해 부모요소가 높이값
+        이 0인 경우 다음과 같이해결한다!
+        1. 부모요소에 overflow:hidden 설정
+        2. float자식요소 중 float이 아닌 마지막 요소에
+         float해제 속성인 clear설정하기!
 
+    */
 
+    /* height: 200px; */
+    /* outline: 4px dotted red; */
     cursor: pointer;
+    /* 손가락모양 */
 
+    /* 애니위한 변경속성 */
     transform: translateY(-200%);
     opacity: 0;
 
-
+    /* 애니메이션: 이시이지반방마 */
     animation: catAni 1s ease-out 3s forwards;
 }
-
-.cat:nth-child(2) {
-    /* 지은탁 */
+/* 캐릭터박스 애니 시차주기 */
+.cat:nth-child(2){/* 지은탁 */
     animation-duration: 3.5s;
 }
-
-.cat:nth-child(3) {
-    /* 저승사자 */
+.cat:nth-child(3){/* 저승사자 */
     animation-duration: 4s;
 }
-
-.cat:nth-child(4) {
-    /* 써니 */
+.cat:nth-child(4){/* 써니 */
     animation-duration: 4.5s;
 }
 
@@ -555,9 +561,7 @@ body {
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-/* catAni 키프레임 */
+} /* catAni 키프레임 */
 
 
 /* 캐릭터 이미지박스 */
@@ -812,7 +816,7 @@ body {
 }
 
 /* 브랜드 바로가기 선택박스 */
-#sel {
+#sel{
     position: absolute;
     top: 20px;
     right: 20px;

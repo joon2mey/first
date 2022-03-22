@@ -176,3 +176,14 @@ html {
 }
 /* ******************메인*********************** */
 
+
+/* LEFT SIDE 박스 디자인 */
+.bDes{
+    height: 40px;
+    width: 400px;
+    background-color: rgb(240, 127, 51);
+    font-size: 20px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
